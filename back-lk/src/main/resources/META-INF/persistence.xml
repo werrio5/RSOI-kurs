@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="org.acme_back-lk_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>ru.rsatu.back.lk.Entities.Timings</class>
+    <class>ru.rsatu.back.lk.Entities.Schedule</class>
+    <class>ru.rsatu.back.lk.Entities.Routesstops</class>
+    <class>ru.rsatu.back.lk.Entities.Routes</class>
+    <class>ru.rsatu.back.lk.Entities.Transport</class>
+    <class>ru.rsatu.back.lk.Entities.Employees</class>
+    <class>ru.rsatu.back.lk.Entities.Stops</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/rsoi-db?serverTimezone=UTC&amp;useUnicode=yes&amp;characterEncoding=UTF-8"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="password"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+    </properties>
+  </persistence-unit>
+</persistence>
